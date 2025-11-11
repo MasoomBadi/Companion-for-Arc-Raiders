@@ -1,11 +1,11 @@
-package com.phoenix.companionforarcraiders.presentation.navigation
+package com.phoenix.companionforarcraiders.core.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.phoenix.companionforarcraiders.core.constants.AppConstants
-import com.phoenix.companionforarcraiders.presentation.home.HomeScreen
+import com.phoenix.companionforarcraiders.feature.home.presentation.HomeScreen
 
 /**
  * Main navigation graph for the app

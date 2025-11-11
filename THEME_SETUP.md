@@ -2,27 +2,22 @@
 
 ## Overview
 
-This project features a beautiful, professional theme inspired by the Arc Raiders game, following Material 3 Expressive Design guidelines. The theme captures the warm, post-apocalyptic aesthetic of the game while maintaining a clean, modern interface.
+This project features a beautiful, professional **dark theme** inspired by the Arc Raiders game, following Material 3 Expressive Design guidelines. The theme captures the warm, post-apocalyptic aesthetic of the game while maintaining a clean, modern interface.
 
 ## Theme Characteristics
 
 ### Color Palette
 
-The color scheme is inspired by the Arc Raiders website's dominant warm beige (#ECE2D0) and creates a unique "post-post-apocalyptic" aesthetic:
+The color scheme is inspired by the Arc Raiders website's dominant warm beige (#ECE2D0) and creates a unique "post-post-apocalyptic" aesthetic. **The app uses only dark theme** to match the game's immersive atmosphere.
 
-**Light Theme:**
-- **Primary**: Warm sandstone (#D4A574) - inviting and earthy
-- **Secondary**: Earthy clay (#A67C52) - grounded and natural
-- **Tertiary**: Warm amber (#E8925C) - energetic accent
-- **Background**: Light beige (#FAF7F2) - soft and welcoming
-- **Surface**: White with beige containers
-
-**Dark Theme:**
-- **Primary**: Lighter tan (#CFB997) - warm contrast
-- **Secondary**: Bronze (#B8956F) - weathered metal
-- **Tertiary**: Copper glow (#D99E6F) - futuristic warmth
-- **Background**: Dark ash (#2A2520) - deep and immersive
-- **Surface**: Dark surface (#352F28) with smoky containers
+**Dark Theme (Only):**
+- **Primary**: Warm tan (#CFB997) - main brand color with warm undertones
+- **Secondary**: Bronze (#B8956F) - weathered metallic tone
+- **Tertiary**: Copper glow (#D99E6F) - futuristic warmth accent
+- **Background**: Deep warm black (#1C1815) - immersive dark base
+- **Surface**: Dark warm surface (#2A2520) - layered depth
+- **Surface Containers**: Multiple elevation levels (#352F28, #3A3530, #4A453F)
+- **Text**: Warm beige (#ECE2D0) on dark backgrounds
 
 ### Typography
 
@@ -37,30 +32,30 @@ All typography follows Material 3 type scale with proper sizing, line heights, a
 
 ## Architecture
 
-The project follows **Clean MVVM Architecture** with:
+The project follows **Feature-Wise Clean MVVM Architecture**:
 
 ```
 app/
+├── feature/           # Feature modules
+│   └── home/
+│       ├── data/      # Repositories, data sources, DTOs
+│       ├── domain/    # Entities, use cases, repository interfaces
+│       └── presentation/  # Screens, ViewModels, UI components
+│           └── HomeScreen.kt
 ├── core/
 │   ├── constants/     # App-wide constants
-│   └── util/          # Utility classes (Resource, etc.)
-├── data/
-│   ├── local/         # Local data sources (Room, DataStore)
-│   ├── remote/        # Remote data sources (Retrofit)
-│   ├── repository/    # Repository implementations
-│   └── model/         # Data models (DTOs)
-├── domain/
-│   ├── model/         # Domain entities
-│   ├── repository/    # Repository interfaces
-│   └── usecase/       # Business logic use cases
-├── presentation/
-│   ├── home/          # Home screen UI & ViewModel
+│   ├── util/          # Utility classes (Resource, etc.)
 │   ├── navigation/    # Navigation graph
-│   └── [features]/    # Other feature modules
-├── di/                # Dependency injection (Hilt modules)
-└── ui/
-    └── theme/         # Theme, colors, typography
+│   └── theme/         # Theme, colors, typography
+└── di/                # Dependency injection (Hilt modules)
 ```
+
+**Benefits of Feature-Wise Architecture:**
+- Each feature is self-contained and independent
+- Easy to add new features without affecting existing ones
+- Clear code organization and navigation
+- Better team collaboration (teams can own features)
+- Scalable for large projects
 
 ## Technology Stack
 
@@ -88,10 +83,10 @@ app/
 
 ### Theme System
 
-1. **Custom Color Schemes**: Both light and dark themes with Arc Raiders branding
+1. **Dark-Only Theme**: Consistent Arc Raiders aesthetic matching the game
 2. **Typography System**: Complete Material 3 type scale with Barlow fonts
-3. **System Bar Theming**: Automatic status bar and navigation bar coloring
-4. **Dynamic Color Support**: Optional Android 12+ dynamic colors (disabled by default to maintain brand identity)
+3. **System Bar Theming**: Automatic dark status bar and navigation bar
+4. **No Dynamic Colors**: Fixed brand colors for consistent experience
 
 ### MVVM Architecture
 
@@ -136,37 +131,37 @@ Text(
 )
 ```
 
-### Theme Customization
+### Using the Theme
 
 ```kotlin
-// Force dark theme
-CompanionForArcRaidersTheme(darkTheme = true) {
-    // Your content
-}
-
-// Enable dynamic colors (Android 12+)
-CompanionForArcRaidersTheme(dynamicColor = true) {
+// The theme is always dark - no parameters needed
+CompanionForArcRaidersTheme {
     // Your content
 }
 ```
 
 ## Design Decisions
 
-1. **Warm Color Palette**: Unlike typical dark, cyberpunk sci-fi themes, Arc Raiders embraces warmth and approachability
-2. **Barlow Font**: Matches official website for brand consistency
-3. **Material 3 Expressive**: Provides more personality than standard Material Design
-4. **Disabled Dynamic Color**: Maintains brand identity across all Android versions
-5. **Edge-to-Edge**: Modern Android experience with proper inset handling
+1. **Dark-Only Theme**: Matches the game's immersive atmosphere and provides consistent experience
+2. **Warm Color Palette**: Unlike typical dark, cyberpunk sci-fi themes, Arc Raiders embraces warmth and approachability
+3. **Barlow Font**: Matches official website for brand consistency
+4. **Material 3 Expressive**: Provides more personality than standard Material Design
+5. **Feature-Wise Architecture**: Scalable, modular structure for growing app
+6. **Edge-to-Edge**: Modern Android experience with proper inset handling
 
 ## Next Steps
 
 As you develop the app, consider:
 
-1. **Feature Modules**: Add new screens in `presentation/[feature]/`
-2. **Data Layer**: Implement repositories and data sources in `data/`
-3. **Use Cases**: Add business logic in `domain/usecase/`
-4. **Testing**: Create unit tests for ViewModels and use cases
-5. **UI Components**: Build reusable components using the theme system
+1. **Add New Features**: Create new feature modules in `feature/[feature_name]/`
+2. **Data Layer**: Implement repositories and data sources in each feature's `data/` directory
+3. **Use Cases**: Add business logic in each feature's `domain/usecase/` directory
+4. **ViewModels**: Create ViewModels in each feature's `presentation/` directory
+5. **Testing**: Create unit tests for ViewModels and use cases
+6. **UI Components**: Build reusable components using the theme system
+7. **Navigation**: Add new routes in `core/navigation/NavGraph.kt`
+
+See `feature/README.md` for detailed instructions on adding new features.
 
 ## Resources
 

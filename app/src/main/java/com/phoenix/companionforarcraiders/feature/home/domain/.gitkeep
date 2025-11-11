@@ -1,0 +1,17 @@
+# Domain Layer for Home Feature
+
+This directory will contain:
+- **models**: Domain entities (business objects)
+- **repository**: Repository interfaces
+- **usecase**: Business logic use cases
+
+Example structure:
+```
+domain/
+├── model/
+│   └── HomeModel.kt
+├── repository/
+│   └── HomeRepository.kt
+└── usecase/
+    └── GetHomeDataUseCase.kt
+```

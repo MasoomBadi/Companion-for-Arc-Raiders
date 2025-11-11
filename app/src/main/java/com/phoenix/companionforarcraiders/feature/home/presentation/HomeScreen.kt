@@ -1,4 +1,4 @@
-package com.phoenix.companionforarcraiders.presentation.home
+package com.phoenix.companionforarcraiders.feature.home.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -19,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.phoenix.companionforarcraiders.ui.theme.CompanionForArcRaidersTheme
+import com.phoenix.companionforarcraiders.core.theme.CompanionForArcRaidersTheme
 
 /**
  * Home Screen - Main entry point of the app
@@ -88,16 +88,8 @@ fun HomeScreen(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun HomeScreenLightPreview() {
-    CompanionForArcRaidersTheme(darkTheme = false) {
-        HomeScreen(navController = rememberNavController())
-    }
-}
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun HomeScreenDarkPreview() {
-    CompanionForArcRaidersTheme(darkTheme = true) {
+fun HomeScreenPreview() {
+    CompanionForArcRaidersTheme {
         HomeScreen(navController = rememberNavController())
     }
 }

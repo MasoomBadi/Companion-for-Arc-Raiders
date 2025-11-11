@@ -9,8 +9,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.phoenix.companionforarcraiders.presentation.navigation.NavGraph
-import com.phoenix.companionforarcraiders.ui.theme.CompanionForArcRaidersTheme
+import com.phoenix.companionforarcraiders.core.navigation.NavGraph
+import com.phoenix.companionforarcraiders.core.theme.CompanionForArcRaidersTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

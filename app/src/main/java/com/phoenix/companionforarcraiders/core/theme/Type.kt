@@ -1,4 +1,4 @@
-package com.phoenix.companionforarcraiders.ui.theme
+package com.phoenix.companionforarcraiders.core.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

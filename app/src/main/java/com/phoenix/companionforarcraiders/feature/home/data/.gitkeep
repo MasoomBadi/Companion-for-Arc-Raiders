@@ -1,0 +1,19 @@
+# Data Layer for Home Feature
+
+This directory will contain:
+- **repositories**: Repository implementations
+- **datasources**: Local (Room, DataStore) and Remote (Retrofit) data sources
+- **models**: DTOs and data transfer objects
+
+Example structure:
+```
+data/
+├── repository/
+│   └── HomeRepositoryImpl.kt
+├── local/
+│   └── HomeLocalDataSource.kt
+├── remote/
+│   └── HomeRemoteDataSource.kt
+└── model/
+    └── HomeDto.kt
+```
