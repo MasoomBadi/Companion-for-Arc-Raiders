@@ -21,12 +21,12 @@ The color scheme is inspired by the Arc Raiders website's dominant warm beige (#
 
 ### Typography
 
-The theme uses the **Barlow** font family (matching the official Arc Raiders website):
+The theme uses the **Poppins** font family - a modern, clean, and beautiful geometric sans-serif:
 
-- **Display Text**: Barlow Semi Condensed Bold - for large, impactful headers
-- **Headlines**: Barlow Bold/SemiBold - for section headers
-- **Body Text**: Barlow Regular/Medium - for readable content
-- **Labels**: Barlow Medium/SemiBold - for buttons and UI elements
+- **Display Text**: Poppins Bold/SemiBold - for large, impactful headers
+- **Headlines**: Poppins Bold/SemiBold - for section headers
+- **Body Text**: Poppins Regular/Normal - for readable content
+- **Labels**: Poppins Medium/SemiBold - for buttons and UI elements
 
 All typography follows Material 3 type scale with proper sizing, line heights, and letter spacing.
 
@@ -144,7 +144,7 @@ CompanionForArcRaidersTheme {
 
 1. **Dark-Only Theme**: Matches the game's immersive atmosphere and provides consistent experience
 2. **Warm Color Palette**: Unlike typical dark, cyberpunk sci-fi themes, Arc Raiders embraces warmth and approachability
-3. **Barlow Font**: Matches official website for brand consistency
+3. **Poppins Font**: Modern, clean, geometric sans-serif for beautiful readability
 4. **Material 3 Expressive**: Provides more personality than standard Material Design
 5. **Feature-Wise Architecture**: Scalable, modular structure for growing app
 6. **Edge-to-Edge**: Modern Android experience with proper inset handling

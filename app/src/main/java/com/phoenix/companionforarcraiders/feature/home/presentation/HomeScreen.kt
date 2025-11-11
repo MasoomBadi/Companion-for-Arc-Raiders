@@ -44,7 +44,7 @@ fun HomeScreen(
                 verticalArrangement = Arrangement.Center,
                 modifier = Modifier.padding(24.dp)
             ) {
-                // Display Large - Show off the condensed font
+                // Display Large - Show off the Poppins font
                 Text(
                     text = "ARC RAIDERS",
                     style = MaterialTheme.typography.displayLarge,
@@ -66,7 +66,7 @@ fun HomeScreen(
 
                 // Body Large - Description
                 Text(
-                    text = "Experience the warm, post-apocalyptic aesthetic of Arc Raiders with clean, professional Barlow typography and Material 3 Expressive Design.",
+                    text = "Experience the warm, post-apocalyptic aesthetic of Arc Raiders with clean, beautiful Poppins typography and Material 3 Expressive Design.",
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center

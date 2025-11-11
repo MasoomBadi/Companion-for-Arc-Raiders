@@ -75,7 +75,7 @@ private val ArcRaidersDarkColorScheme = darkColorScheme(
  *
  * Features:
  * - Warm, post-apocalyptic color palette (#ECE2D0 inspired)
- * - Barlow font family matching the official Arc Raiders website
+ * - Poppins font family for clean, modern typography
  * - Material 3 Expressive Design guidelines
  * - Edge-to-edge display with proper system bar theming
  *
@@ -91,9 +91,10 @@ fun CompanionForArcRaidersTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.background.toArgb()
-            window.navigationBarColor = colorScheme.background.toArgb()
-            WindowCompat.getInsetsController(window, view).apply {
+            // Set system bar appearance (dark icons for light bars, light icons for dark bars)
+            // Note: statusBarColor and navigationBarColor are deprecated.
+            // Use enableEdgeToEdge() in MainActivity instead for proper edge-to-edge support
+            WindowCompat.getInsetsController(window, view)?.apply {
                 isAppearanceLightStatusBars = false
                 isAppearanceLightNavigationBars = false
             }
