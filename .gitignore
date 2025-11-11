@@ -125,6 +125,9 @@ $RECYCLE.BIN/
 # Kotlin
 .kotlin/
 
+# Claude Code
+.claude/
+
 # Misc
 *.swp
 .project
