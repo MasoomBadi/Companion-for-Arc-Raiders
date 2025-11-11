@@ -10,36 +10,36 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 /**
- * Arc Raiders Dark Color Scheme
- * Inspired by the game's warm, post-apocalyptic aesthetic
+ * Arc Raiders Cyberpunk Color Scheme
+ * Futuristic neon aesthetic with vibrant electric accents
  * Following Material 3 Expressive Design guidelines
  */
-private val ArcRaidersDarkColorScheme = darkColorScheme(
-    // Primary colors - Warm tan/beige
+private val ArcRaidersCyberpunkColorScheme = darkColorScheme(
+    // Primary colors - Neon Teal
     primary = ArcPrimary,
     onPrimary = ArcOnPrimary,
     primaryContainer = ArcPrimaryVariant,
-    onPrimaryContainer = ArcOnBackground,
+    onPrimaryContainer = ArcTextPrimary,
 
-    // Secondary colors - Bronze
+    // Secondary colors - Magenta Highlight
     secondary = ArcSecondary,
     onSecondary = ArcOnSecondary,
     secondaryContainer = ArcSecondaryVariant,
-    onSecondaryContainer = ArcOnBackground,
+    onSecondaryContainer = ArcTextPrimary,
 
-    // Tertiary colors - Copper glow
+    // Tertiary colors - Neon Green
     tertiary = ArcTertiary,
     onTertiary = ArcOnTertiary,
     tertiaryContainer = ArcTertiaryVariant,
-    onTertiaryContainer = ArcOnBackground,
+    onTertiaryContainer = ArcTextPrimary,
 
-    // Background & Surface
-    background = ArcBackground,
-    onBackground = ArcOnBackground,
+    // Background & Surface - Deep cosmic blue-black
+    background = ArcBlack,
+    onBackground = ArcTextPrimary,
     surface = ArcSurface,
-    onSurface = ArcOnSurface,
+    onSurface = ArcTextPrimary,
     surfaceVariant = ArcSurfaceVariant,
-    onSurfaceVariant = ArcOnSurfaceVariant,
+    onSurfaceVariant = ArcTextSecondary,
 
     // Surface containers - Material 3 elevation system
     surfaceContainerLowest = ArcSurfaceContainerLowest,
@@ -53,7 +53,7 @@ private val ArcRaidersDarkColorScheme = darkColorScheme(
     inverseOnSurface = ArcInverseOnSurface,
     inversePrimary = ArcInversePrimary,
 
-    // Outline
+    // Outline - Subtle borders
     outline = ArcOutline,
     outlineVariant = ArcOutlineVariant,
 
@@ -70,11 +70,12 @@ private val ArcRaidersDarkColorScheme = darkColorScheme(
 /**
  * Main theme composable for Companion for Arc Raiders
  *
- * Always uses dark theme with Arc Raiders brand colors
- * No light theme or dynamic colors - maintains consistent game aesthetic
+ * Cyberpunk neon aesthetic with vibrant electric colors
+ * No light theme or dynamic colors - maintains consistent futuristic aesthetic
  *
  * Features:
- * - Warm, post-apocalyptic color palette (#ECE2D0 inspired)
+ * - Deep cosmic blue-black backgrounds (#0B0F19)
+ * - Neon accent colors (teal, magenta, green)
  * - Poppins font family for clean, modern typography
  * - Material 3 Expressive Design guidelines
  * - Edge-to-edge display with proper system bar theming
@@ -85,7 +86,7 @@ private val ArcRaidersDarkColorScheme = darkColorScheme(
 fun CompanionForArcRaidersTheme(
     content: @Composable () -> Unit
 ) {
-    val colorScheme = ArcRaidersDarkColorScheme
+    val colorScheme = ArcRaidersCyberpunkColorScheme
 
     val view = LocalView.current
     if (!view.isInEditMode) {
